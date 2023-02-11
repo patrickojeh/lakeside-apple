@@ -1,5 +1,6 @@
 :root {
   --black: #000;
+  --blue: #329afc;
   --white: #fff;
 }
 
@@ -21,8 +22,17 @@ h1 {
   font-size: 48px;
 }
 
+h2 {
+  font-size: 36px;
+}
+
 .hero {
   background-color: var(--black);
+}
+
+.hero h1,
+.hero p {
+  color: var(--white);
 }
 
 nav ul {
@@ -44,7 +54,6 @@ nav a {
 }
 
 .content {
-  color: var(--white);
   text-align: center;
 }
 
@@ -53,12 +62,12 @@ nav a {
   padding-top: 56px;
 }
 
-.content p {
+h1 + p {
   font-size: 24px;
 }
 
 .content a {
-  color: #329afc;
+  color: var(--blue);
   font-size: 20px;
 }
 
@@ -72,4 +81,43 @@ nav a {
 .content img {
   height: 500px;
   margin-top: 40px;
+}
+
+.hero + section {
+  background: #fbfbfd;
+  text-align: center;
+}
+
+.hero + section img {
+  object-fit: contain;
+  max-width: 100%;
+  margin-top: 0;
+}
+
+section.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+section.grid div {
+  background: black;
+  border-radius: 8px;
+  color: white;
+  text-align: center;
+  padding-top: 32px;
+}
+
+section.grid img {
+  max-width: 100%;
+}
+
+section.grid a {
+  color: var(--blue);
+}
+
+section h2 + p {
+  font-size: 20px;
+  margin-bottom: 8px;
+  margin-top: 4px;
 }
